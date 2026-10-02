@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Giljic | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --tag-bg: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2.5rem 1.25rem;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid var(--tag-bg);
+      padding-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .personal-statement {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 650px;
+    }
+
+    .personal-statement strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill-tag {
+      background-color: var(--tag-bg);
+      color: var(--text);
+      padding: 0.4rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--tag-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .project-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+      color: var(--accent-hover);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--tag-bg);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Adam Giljic</h1>
+      <p class="personal-statement">
+        Aspiring <strong>Business Analytics & IT</strong> student skilled in database analysis, predictive modeling, and modern analytics tools to drive data-informed business decisions.
+      </p>
+    </header>
+
+    <main>
+      <!-- Technical Skills Section -->
+      <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">Time Series Forecasting</span>
+          <span class="skill-tag">Relational Databases</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Microsoft Excel</span>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section>
+        <h2>Featured Projects</h2>
+        <div class="projects-list">
+          
+          <!-- Project 1: Python Language Model -->
+          <article class="project-card">
+            <h3 class="project-title">Statistical Bigram Language Model & Text Generator</h3>
+            <p class="project-desc">
+              Built a Python bigram language model from scratch to preprocess raw text, calculate word-pair transition frequencies, and generate sentences using weighted probability distributions.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/ag2270/bigram-lanuage-model" target="_blank" rel="noopener noreferrer">View Source Code on GitHub →</a>
+            </div>
+          </article>
+
+          <!-- Project 2: R Time Series Forecasting -->
+          <article class="project-card">
+            <h3 class="project-title">U.S. Electricity Price Time Series Forecasting & Econometric Analysis</h3>
+            <p class="project-desc">
+              Analyzed over 40 years of monthly U.S. electricity price data in R. Applied STL decomposition to isolate seasonal variations, preprocessed missing values with interpolation, and benchmarked ETS, Linear Regression, and ARIMA models to forecast multi-year pricing trends.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/ag2270/time-series-electricity-forecast" target="_blank" rel="noopener noreferrer">View R Analysis on GitHub →</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Adam Giljic • Hosted on GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>
